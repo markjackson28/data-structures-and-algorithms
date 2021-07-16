@@ -62,17 +62,33 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 let newStringArray = [];
 
+// const greeting = (word) => {
+//   word.forEach(oldString => {
+//     let newString = oldString.toUpperCase() + '!';
+//     newStringArray.push(newString);
+//   });
+//   return newStringArray;
+// };
+
+// const speaker = (words, callback) => {
+//   return callback(words);
+// };
+
 const greeting = (word) => {
-  word.forEach(oldString => {
-    let newString = oldString.toUpperCase() + '!';
-    newStringArray.push(newString);
+  let newString = word.toUpperCase();
+  return newString + '!';
+};
+
+const speaker = (words, callback) => {
+  words.forEach(word => {
+    let newWord = callback(word);
+    newStringArray.push(newWord);
   });
   return newStringArray;
 };
 
-const speaker = (words, callback) => {
-  return callback(words);
-};
+// class example
+// const greeting = word => word.toUpperCase() + '!'
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -144,7 +160,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let fizzBuzzArray = [];
+  arr.forEach(num => {
+    if ((num % 3 ===0) && (num % 5 ===0)) {
+      fizzBuzzArray.push('Fizz Buzz');
+    } else if (num % 5 === 0) {
+      fizzBuzzArray.push('Buzz');
+    } else if (num % 3 === 0) {
+      fizzBuzzArray.push('Fizz');
+    } else {
+      fizzBuzzArray.push(num);
+    }
+  });
+  return fizzBuzzArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,7 +226,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
