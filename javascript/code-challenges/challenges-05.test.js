@@ -144,7 +144,7 @@ const returnNames = (arr) => {
 
 // const returnNames = (arr) => {
 //   // Solution code here...
-//   const namesArr = starWarsData.reduce((acc, name) => {
+//   let namesArr = starWarsData.reduce((acc, name) => {
 //     acc.push(name.name);
 //     return acc;
 //   }, []);
