@@ -52,6 +52,8 @@ const appendFirstToLast = (arr) => {
   arr.push(arr.slice(0, 1)[0]);
 };
 
+// or arr.push(arr.slice[0])
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
