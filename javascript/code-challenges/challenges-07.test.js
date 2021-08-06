@@ -135,6 +135,16 @@ const listFoods = (recipe) => {
   return result;
 };
 
+// const listFoods = (recipe) => {
+//   let result = [];
+//   recipe.ingridents.forEach(ingreidient => {
+//    let withoutNumber = ingredient.slice(ingreident.indexOf(' ') + 1);
+//    let withoutMeasurment = withoutNumber.slice(withoutNumber.indexOf(' ') + 1);
+//    results.push(withoutMeasument)
+//    });
+//   return result;
+// };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
