@@ -115,6 +115,12 @@ const isCapitalized = (str) => {
   return result;
 };
 
+// const isCapitalized = (str) => {
+//   let firstCap = /[A-Z][a-zA-Z]*/g;
+//   let results = srt.match(firstCap);
+//   return results || [];
+// };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
