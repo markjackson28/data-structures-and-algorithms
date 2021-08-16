@@ -28,9 +28,17 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-
+  //this finds the max in the row
+  let maxRow = matrix.map(row => {
+    return Math.max.apply(Math, row);
+  });
+  //overall max from rows
+  let max = Math.max.apply(null, maxRow);
+  return max;
 };
 
+
+// https://stackoverflow.com/questions/39342575/max-value-of-a-multidimensional-array-javascript/39342787
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -46,10 +54,14 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  //flattens the array
+  let flatArr = matrix.flat();
+  // accumulates the results
+  let sum = flatArr.reduce((acc, value) => acc += value, 0);
+  return sum;
 };
 
-
+// https://stackoverflow.com/questions/66836933/computing-sum-of-a-2d-array-in-javascript
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -73,9 +85,18 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let hourlySales = [];
+  for (let i in stores[0]) {
+    let hourlyTotal = 0;
+    for (let j in stores) {
+      hourlyTotal += stores[j][i];
+    }
+    hourlySales.push(hourlyTotal);
+  }
+  return hourlySales;
 };
+
+// From lecture
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -88,8 +109,17 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let salesOverview = [];
+  data.forEach((cookieTotal, index) => {
+    salesOverview.push({
+      sales: `${cookieTotal} cookies`,
+      time: hours[index]
+    });
+  });
+  return salesOverview;
 };
+
+// From lecture
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -113,8 +143,10 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
+
+// From lecture
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
