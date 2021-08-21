@@ -11,6 +11,8 @@ const replaceZeros = (string) => {
   return string.replace(regex, 'zero');
 };
 
+//Ryan helped
+//https://regex101.com/
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -24,6 +26,14 @@ const validatePin = (pin) => {
   return regex.test(pin);
 };
 
+// Another variation
+// const validatePin = (pin) => {
+//   let regex = /^\d{4}$/;
+//   return regex.test(pin);
+// };
+
+//Ryan helped
+//https://regex101.com/
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -33,9 +43,11 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
-  // Solution code here...
+  let regex = /^[a-zA-Z]{5,10}$/gm;
+  return regex.test(word);
 };
 
+//https://regex101.com/
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -45,8 +57,16 @@ If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
-  // Solution code here...
+  let regex = /^[a-zA-Z]+[0-9]/gm;
+  return regex.test(string);
 };
+
+
+// const hasNumber = (string) => {
+//   let regex = /^[a-zA-Z]+\d+/gm;
+//   return regex.test(string);
+// };
+// inclass
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -65,8 +85,13 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  let regex = /^[a-zA-Z0-9]+\.?[a-zA-Z0-9]+?@[a-zA-Z0-9]+.(com|net|org)$/gm;
+  return regex.test(email);
 };
+
+// this makes more sense to me
+// inclass let regex = /^[a-zA-Z0-9]+\.?[a-zA-Z0-9]+?@[a-zA-Z0-9]+.(com|net|org)$/gm;
+// Other variation: let regex = /^\w+(\.\w+)?@\w+\.(net|com|org)$/gm;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -90,8 +115,12 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let regex = /^((\(\d\d\d\))|(\d\d\d))[ -]?\d\d\d[ -]?\d\d\d\d$/gm;
+  // let regex = /^(\(\d{3}\)[ ]?|\d{3})[- ]?\d{3}[- ]?\d{4}$/gm;
+  return regex.test(phoneNumber);
 };
+
+// inclass let regex = /^(\(\d{3}\)[ ]?|\d{3})[- ]?\d{3}[- ]?\d{4}$/gm;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
