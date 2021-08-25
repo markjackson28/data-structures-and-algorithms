@@ -11,6 +11,15 @@ const longestString = (arr) => {
   return arr.indexOf(longestWord);
 };
 
+// class
+// const longestString = (arr) => {
+//   let currentLongest = { largestIdx: -1, largestStrLen: 0 };
+//   arr.forEach((str, idx) => {
+//     (str.length > currentLongest.largestStrLen) ? currentLongest = { largestIdx: idx, largestStrLen: str.length } : '';
+//   });
+//   return currentLongest.largestIdx;
+// };
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 // https://stackoverflow.com/questions/46125796/return-longest-string-in-array-javascript/46127929
 /* ------------------------------------------------------------------------------------------------
@@ -46,11 +55,12 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  return arr.map((num) => `${num.substring(1, 4)}${num.substring(6, 9)}${num.substring(10,14)}`);
 };
 
+//From class
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
 
@@ -58,9 +68,11 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  return str.split('')
+  .filter((el, idx) => idx % 2 === 1)
+  .join('');
 };
-
+//class
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
@@ -68,9 +80,9 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  return arr.every((str) => str.includes(':)'));
 };
-
+//class
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
