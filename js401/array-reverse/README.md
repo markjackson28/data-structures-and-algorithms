@@ -4,7 +4,6 @@
 
 ## Whiteboard Process
 > <img src="reverse-array.png" width=400/>
->
 
 ## Approach & Efficiency
 > This was done in class.
