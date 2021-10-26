@@ -30,19 +30,43 @@ class LinkedList {
     }
 
     let currentNode = this.head;
-    while (currentNode.next) {
+    while (currentNode.next !== null) {
       currentNode = currentNode.next;
     }
     currentNode.next = node;
     return this;
   }
 
-  addBefore() {
-    // still need to work on
+  addBefore(value, newValue) {
+    let node = new Node(newValue);
+    let currentNode = this.head;
+    let previousNode;
+    // console.log(currentNode);
+
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        node.next = currentNode;
+        previousNode.next = node;
+        return;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.next;
+    }
   }
 
-  addAfter() {
-    // still need to work on
+  addAfter(value, newValue) {
+    // Add error handling
+    let node = new Node(newValue);
+    let currentNode = this.head;
+
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        node.next = currentNode;
+        currentNode.next = node;
+        return;
+      } 
+      currentNode = currentNode.next;
+    }
   }
   
   toString() {
@@ -59,11 +83,12 @@ class LinkedList {
 }
 
 let list = new LinkedList();
-list.insertHead(1);
-list.append(2);
-list.append(3);
-list.addBefore(3, 10);
+// list.insertHead(1);
+// list.append(2);
+// list.append(3);
+// list.addBefore(3, 10);
+list.addBefore(3, 4);
 
-console.log(list.toString());
+console.log(list);
 
 module.exports = LinkedList;

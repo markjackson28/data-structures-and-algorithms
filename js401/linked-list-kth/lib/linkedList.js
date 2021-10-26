@@ -30,19 +30,63 @@ class LinkedList {
     }
 
     let currentNode = this.head;
-    while (currentNode.next) {
+    while (currentNode.next !== null) {
       currentNode = currentNode.next;
     }
     currentNode.next = node;
     return this;
   }
 
-  addBefore() {
-    // still need to work on
+  // Help from Ayrat
+  addBefore(value, newValue) {
+    let node = new Node(newValue);
+    let currentNode = this.head;
+    let previousNode;
+    // console.log(currentNode);
+
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        node.next = currentNode;
+        previousNode.next = node;
+        return;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.next;
+    }
   }
 
-  addAfter() {
-    // still need to work on
+  // Help from Ayrat
+  addAfter(value, newValue) {
+    // Add error handling
+    let node = new Node(newValue);
+    let currentNode = this.head;
+
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        node.next = currentNode.next;
+        currentNode.next = node;
+        return;
+      } 
+      currentNode = currentNode.next;
+    }
+  }
+
+  // Help from Ayrat
+  kthFromEnd(k) {
+    let arr = [];
+    let currentNode = this.head;
+    arr.push(currentNode.value);
+
+    while(currentNode.next !== null) {
+      currentNode = currentNode.next;
+      arr.push(currentNode.value);
+    }
+    let index = arr.length -k;
+    if (index >= 1) {
+      return arr[index-1];
+    } else {
+      return `Exception`;
+    }
   }
   
   toString() {
@@ -55,15 +99,20 @@ class LinkedList {
     return `"${string}NULL"`;
   }
 
-
 }
 
-let list = new LinkedList();
-list.insertHead(1);
-list.append(2);
-list.append(3);
-list.addBefore(3, 10);
+// Testing
+// let list = new LinkedList();
+// list.insertHead(1);
+// list.append(3);
+// list.append(8);
+// list.append(2);
+// list.addBefore(3, 10);
+// list.addBefore(3, 4);
+// list.addAfter(10, 7);
+// console.log('Truthy: ', list.kthFromEnd(2));
+// console.log('Falsy: ', list.kthFromEnd(100));
+// console.log(list.toString());
 
-console.log(list.toString());
 
 module.exports = LinkedList;
