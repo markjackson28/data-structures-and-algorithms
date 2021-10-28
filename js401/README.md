@@ -10,3 +10,4 @@
 - [Code Challenge 4 - Linked List](linked-list/README.md)
 - [Code Challenge 5 - Linked List Insertions](linked-list-insertions/README.md)
 - [Code Challenge 6 - Linked List kth](linked-list-kth/README.md)
+- [Code Challenge 7 - Linked List zip](linked-list-zip/README.md)
