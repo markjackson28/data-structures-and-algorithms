@@ -71,4 +71,8 @@ class LinkedList {
 
 }
 
+// let list = new LinkedList()
+
+// console.log(list);
+
 module.exports = LinkedList;
