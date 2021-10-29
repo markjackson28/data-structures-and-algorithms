@@ -11,7 +11,7 @@
 - You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 ## Approach & Efficiency
-This is hard for me to grasp. Will come back to this.
+This is hard for me to grasp. I had to get TA help with this and she did an amazing job of explaining the algorithm to me. So I had to create a new empty linked list. Then I had to walk through the two list and append the nodes values, one after another to the new linked list. It also compares if the linked list is equal or if one is less than the other.
 
 ## Solution
 - run npm test

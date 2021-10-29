@@ -118,7 +118,6 @@ class LinkedList {
         l2.current = l2.current.next;
       }
     }
-
     return l3.head;
   }
 
@@ -135,9 +134,9 @@ class LinkedList {
 }
 
 // Testing
-let list1 = new LinkedList();
-let list2 = new LinkedList();
-let list3 = new LinkedList();
+// let list1 = new LinkedList();
+// let list2 = new LinkedList();
+// let list3 = new LinkedList();
 // list.insertHead(1);
 // list.append(3);
 // list.append(8);
@@ -147,15 +146,17 @@ let list3 = new LinkedList();
 // list.addAfter(10, 7);
 // console.log('Truthy: ', list.kthFromEnd(2));
 // console.log('Falsy: ', list.kthFromEnd(100));
-list1.append(1);
-list1.append(3);
-list1.append(2);
-list2.append(5);
-list2.append(9);
-list2.append(4);
+// list1.append(1);
+// list1.append(3);
+// list1.append(2);
+// list2.append(5);
+// list2.append(9);
+// list2.append(4);
 // console.log(list1.toString());
 // console.log(list2.toString());
-let zipList = list3.LLZ(list1, list2);
-console.log(util.inspect(zipList, false, null, true));
+// let zipList = list3.LLZ(list1, list2);
+// console.log(util.inspect(zipList, false, null, true));
+// console.log(zipList);
+
 
 module.exports = LinkedList;
