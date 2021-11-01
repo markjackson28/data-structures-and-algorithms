@@ -47,7 +47,7 @@
       - Returns: Boolean indicating whether or not the queue is empty
 
 ## Approach & Efficiency
-
+My approach was to reference what I had done in the linked lists. It was somewhat fimiliar but I still need a bit more clarification and how some of them work. The flow is to basically just point and transverse through the stack or queue and return what you are looking for. There is a bit of assigning and reassigning of values.
 
 ## Solution
-- run npm test
+- run `npm test`
