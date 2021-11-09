@@ -4,38 +4,38 @@
 const util = require('util');
 
 // Importing node class for use
-const Node = require('./node');
+// const Node = require('./node');
 
 class Stack {
   constructor() {
-    this.top = null;
+    this.length = 0;
   }
 
   push(value) {
-    // New Node
-    let node = new Node(value);
-    node.next = this.top;
-    this.top = node;
-  }
-
-  pop() {
-    let temp = this.top;
-    this.top = temp.next;
-    temp.next = null;
-    return temp.value;
-  }
-
-  peek() {
-    let current = this.top;
-    if (current === null) {
-      return 'empty sauce container';
-    } else {
-      return current.value;
+    if (value) {
+      this[this.length++] = value;
     }
   }
 
+  pop() {
+    if (!this.length) {
+      throw new Error;
+    }
+    let item = this[this.length - 1];
+    delete this[this.length - 1];
+    this.length--;
+    return item;
+  }
+
+  peek() {
+    if (!this.length) {
+      throw new Error
+    }
+    return this[this.length - 1];
+  }
+
   isEmpty() {
-    if (stack.top === null) {
+    if (this.length === 0) {
       return true;
     } else {
       return false;
@@ -52,9 +52,9 @@ let stack = new Stack();
 // stack.push(2);
 // stack.push(3);
 // Pop Test
-// stack.pop(3);
-// stack.pop(2);
-// stack.pop(1);
+// stack.pop();
+// stack.pop();
+// stack.pop();
 // console.log(stack.isEmpty());
 // console.log(stack.peek());
 // console.log(util.inspect(stack, false, null, true));

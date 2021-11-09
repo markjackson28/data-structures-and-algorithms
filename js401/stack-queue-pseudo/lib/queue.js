@@ -43,7 +43,8 @@ class Queue {
   }
 
   isEmpty() {
-    if (queue.front === null) {
+    let current = this.front;
+    if (current === null) {
       return true;
     } else {
       return false;
@@ -54,7 +55,7 @@ class Queue {
 
 
 // Testing
-let queue = new Queue();
+// let queue = new Queue();
 // enqueue Test
 // queue.enqueue(1);
 // queue.enqueue(2);

@@ -2,7 +2,7 @@
 
 const Node = require('../lib/node');
 
-describe('Node Test', () => {
+xdescribe('Node Test', () => {
 
   it('should test the node contructor', () => {
     let value = 'Oreo';

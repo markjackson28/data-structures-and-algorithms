@@ -13,10 +13,10 @@
     - Inserts value into the PseudoQueue, using a first-in, first-out approach.
   - dequeue
     - Arguments: none
-    - Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+    - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
 ## Approach & Efficiency
-My approach was to reference what I had done in the linked lists. It was somewhat fimiliar but I still need a bit more clarification and how some of them work. The flow is to basically just point and transverse through the stack or queue and return what you are looking for. There is a bit of assigning and reassigning of values.
+My approach was to reference what I had done in the linked lists but for some reason I had to change the functions to reference an array. Once I did that, I was able to understand how to apply the functions to the two stacks. Some of the logic was a bit of guessing and messing around but I believe I got it to work. Still may need to come back to this to understand it more.
 
 ## Solution
 - run `npm test`
