@@ -3,6 +3,9 @@
 // To display full object
 const util = require('util');
 
+// Importing node class for use
+// const Node = require('./node');
+
 class Stack {
   constructor() {
     this.length = 0;

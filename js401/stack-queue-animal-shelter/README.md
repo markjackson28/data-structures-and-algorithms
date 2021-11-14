@@ -1,4 +1,4 @@
-# Stacks and Queues
+# Stacks Queues Animal Shelter
 
 # Challenge Summary
 - First-in, First out Animal Shelter.

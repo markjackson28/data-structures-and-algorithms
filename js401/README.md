@@ -13,4 +13,6 @@
 - [Code Challenge 7 - Linked List zip](linked-list-zip/README.md)
 - [Code Challenge 8 - Stack & Queues](stack-and-queue/README.md)
 - [Code Challenge 9 - Stack-Queue-Pseudo](stack-queue-pseudo/README.md)
-- [Code Challenge 10 - Stack-queue-animal-shelter](stack-queue-animal-shelter/README.md)
+- [Code Challenge 10 - Stack Queue Animal Shelter](stack-queue-animal-shelter/README.md)
+- [Code Challenge 11 - Stack Queue Brackets](stack-queue-brackets/README.md)
+- [Code Challenge 12 - Trees](trees/README.md)
