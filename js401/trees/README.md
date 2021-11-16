@@ -23,7 +23,11 @@
       - Returns: boolean indicating whether or not the value is in the tree at least once.
 
 ## Approach & Efficiency
-WIP
+On paper, trees makes sense to me but when it comes to writing the code, it got a bit confusing to me. I still need a bit of practice with these. I did find how to do them through resources. I did console out what was happening within the functions but still need to work on them.
+
+Resources:
+- [Add](https://www.digitalocean.com/community/tutorials/js-binary-search-trees)
+- [Search](https://www.tutorialspoint.com/Searching-for-values-in-an-Javascript-Binary-Search-Tree)
 
 ## Solution
 - run `npm test`

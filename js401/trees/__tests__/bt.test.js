@@ -1,7 +1,7 @@
 'use strict';
 
 const Node = require('../util/node');
-const BT = require('../util/bt');
+const BT = require('../util/binaryTree');
 
 // create Nodes 1 - 9 and left/right relationships
 
@@ -37,32 +37,33 @@ one.right = three;
 three.left = four;
 three.right = five;
 
-let preRes = [1,2,6,7,8,9,3,4,5];
-let inRes = [6,8,7, 9, 2, 1, 4, 3,5 ];
+let preRes = [1, 2, 6, 7, 8, 9, 3, 4, 5];
+let inRes = [6, 8, 7, 9, 2, 1, 4, 3, 5];
 let postRes = [8, 9, 7, 6, 2, 4, 5, 3, 1 ];
 
 // Create BT with root Node(1)
 let tree = new BT(one);
+// console.log(tree);
 
 describe('Binary Tree Traversal', () => {
 
     it('preOrder properly traverses and returns result', () => {
         let preOrder = tree.preOrder();
-        console.log(preOrder);
+        // console.log(preOrder);
         expect(preOrder).toEqual(preRes);
     });
+
+    it('inOrder properly traverses and returns result', () => {
+        let inOrder = tree.inOrder();
+        // console.log(inOrder);
+        expect(inOrder).toEqual(inRes);
+    });
+
+    it('postOrder properly traverses and returns result', () => {
+        let postOrder = tree.postOrder();
+        // console.log(postOrder);
+        expect(postOrder).toEqual(postRes);
+    });
+
 });
 
-/*
-Test preorder
-    let preOrder = tree.preOrder
-    expect preOrder to equal preRes!
-
-Test inOrder
-    let inOrder = tree.inOrder
-    expect inOrder to equal preRes!
-
-Test postOrder
-    let postOrder = tree.postOrder
-    expect postOrder to equal postRes!
-*/
