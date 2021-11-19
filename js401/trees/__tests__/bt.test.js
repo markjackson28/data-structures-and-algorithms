@@ -43,6 +43,7 @@ let postRes = [8, 9, 7, 6, 2, 4, 5, 3, 1 ];
 
 // Create BT with root Node(1)
 let tree = new BT(one);
+let emptyTree = new BT();
 // console.log(tree);
 
 describe('Binary Tree Traversal', () => {
@@ -64,6 +65,12 @@ describe('Binary Tree Traversal', () => {
         // console.log(postOrder);
         expect(postOrder).toEqual(postRes);
     });
+
+    it('should return the max of the BT', () => {
+        let results = tree.max();
+        // console.log(results);
+        expect(results).toEqual(9);
+    })
 
 });
 
