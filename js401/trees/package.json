@@ -1,0 +1,19 @@
+{
+  "name": "trees",
+  "version": "1.0.0",
+  "description": "<!-- Short summary or background information -->",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "watch": "jest --coverage --verbose --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.2.5"
+  }
+}
