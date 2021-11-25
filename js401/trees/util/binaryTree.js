@@ -79,13 +79,35 @@ class BinaryTree {
     // starts maxVal at index 0
     let maxVal = data[0];
     // loops through the data
-    for(let i = 1; i < data.length; i++){
+    for (let i = 1; i < data.length; i++) {
       // if the index value is greater than maxVal, reassign and return
-      if(data[i] > maxVal) {
+      if (data[i] > maxVal) {
         maxVal = data[i];
       }
     }
     return maxVal;
+  }
+
+  breadthFirst() {
+    // create empty arr for results and queue
+    let results = [];
+    let queue = [];
+    // set the starting/current point to the root
+    let current = this.root;
+    // pushing the current to the queue
+    queue.push(current);
+    // start the traversal with a while there is a length
+    while (queue.length) {
+      // assigning current to shifted val
+      current = queue.shift();
+      // pushing that node val to the results arr
+      results.push(current.value);
+      // if truthy, push curr.left into queue
+      if (current.left) queue.push(current.left);
+      // if truthy, push curr.right into queue
+      if (current.right) queue.push(current.right);
+    }
+    return results;
   }
 
 };
@@ -100,7 +122,7 @@ class BinaryTree {
 // let eight = new Node(8);
 // let nine = new Node(9);
 
-//left
+// // left
 // one.left = two;
 // two.left = six;
 // six.right = seven;
@@ -113,9 +135,9 @@ class BinaryTree {
 
 // let tree = new BinaryTree(one);
 // let emptyTree = new BinaryTree();
-
+// let test = tree.breadthFirst();
 // let result = tree.max();
 // console.log(result);
-// console.log(util.inspect(emptyTree.max(), false, null, true));
+// console.log(util.inspect(test, false, null, true));
 
 module.exports = BinaryTree;
