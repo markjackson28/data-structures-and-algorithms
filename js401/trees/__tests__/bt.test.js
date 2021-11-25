@@ -39,7 +39,8 @@ three.right = five;
 
 let preRes = [1, 2, 6, 7, 8, 9, 3, 4, 5];
 let inRes = [6, 8, 7, 9, 2, 1, 4, 3, 5];
-let postRes = [8, 9, 7, 6, 2, 4, 5, 3, 1 ];
+let postRes = [8, 9, 7, 6, 2, 4, 5, 3, 1];
+let bfRes = [1, 2, 3, 6, 4, 5, 7, 8 , 9];
 
 // Create BT with root Node(1)
 let tree = new BT(one);
@@ -50,26 +51,27 @@ describe('Binary Tree Traversal', () => {
 
     it('preOrder properly traverses and returns result', () => {
         let preOrder = tree.preOrder();
-        // console.log(preOrder);
         expect(preOrder).toEqual(preRes);
     });
 
     it('inOrder properly traverses and returns result', () => {
         let inOrder = tree.inOrder();
-        // console.log(inOrder);
         expect(inOrder).toEqual(inRes);
     });
 
     it('postOrder properly traverses and returns result', () => {
         let postOrder = tree.postOrder();
-        // console.log(postOrder);
         expect(postOrder).toEqual(postRes);
     });
 
     it('should return the max of the BT', () => {
         let results = tree.max();
-        // console.log(results);
         expect(results).toEqual(9);
+    });
+
+    it('should return in order of the levels of the tree', () => {
+        let breadthFirst = tree.breadthFirst();
+        expect(breadthFirst).toEqual(bfRes);
     })
 
 });

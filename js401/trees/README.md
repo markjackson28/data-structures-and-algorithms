@@ -2,6 +2,11 @@
 
 # Challenge Summary
 
+## Breath-first Traversal
+- Write a function called breadth first
+- Arguments: tree
+- Return: list of all values in the tree, in the order they were encountered
+
 - Node
   - Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 - Binary Tree
@@ -28,6 +33,7 @@ On paper, trees makes sense to me but when it comes to writing the code, it got 
 Resources:
 - [Add](https://www.digitalocean.com/community/tutorials/js-binary-search-trees)
 - [Search](https://www.tutorialspoint.com/Searching-for-values-in-an-Javascript-Binary-Search-Tree)
+- [BFT](https://dev.to/edwardcashmere/binary-tree-part-3-breadth-first-search-javascript-and-python-21k1)
 
 ## Solution
 - run `npm test`
