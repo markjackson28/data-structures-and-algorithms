@@ -110,34 +110,64 @@ class BinaryTree {
     return results;
   }
 
+  fizzBuzzTree() {
+    let queue = [];
+    let results = [];
+    let fizzBuzzRes = [];
+    let current = this.root;
+    queue.push(current);
+
+    while (queue.length) {
+      current = queue.shift();
+      results.push(current.value);
+      if (current.left) queue.push(current.left);
+      if (current.right) queue.push(current.right);
+    }
+
+    for (let i = 1; i < results.length; i++) {
+      if ((i % 3) === 0 && (i % 5) === 0) {
+        fizzBuzzRes.push("FizzBuzz");
+      } else if ((i % 3) === 0) {
+        fizzBuzzRes.push("Fizz");
+      } else if ((i % 5) === 0) {
+        fizzBuzzRes.push("Buzz");
+      } else {
+        fizzBuzzRes.push(i);
+      }
+    }
+    return fizzBuzzRes;
+  }
+
 };
 
-// let one = new Node(1);
-// let two = new Node(2);
-// let three = new Node(3);
-// let four = new Node(4);
-// let five = new Node(5);
-// let six = new Node(6);
-// let seven = new Node(7);
-// let eight = new Node(8);
-// let nine = new Node(9);
+let one = new Node(1);
+let two = new Node(2);
+let three = new Node(3);
+let four = new Node(4);
+let five = new Node(5);
+let six = new Node(6);
+let seven = new Node(7);
+let eight = new Node(8);
+let nine = new Node(9);
 
-// // left
-// one.left = two;
-// two.left = six;
-// six.right = seven;
-// seven.left = eight;
-// seven.right = nine;
-// // right
-// one.right = three;
-// three.left = four;
-// three.right = five;
+// left
+one.left = two;
+two.left = six;
+six.right = seven;
+seven.left = eight;
+seven.right = nine;
+// right
+one.right = three;
+three.left = four;
+three.right = five;
 
-// let tree = new BinaryTree(one);
+let tree = new BinaryTree(one);
 // let emptyTree = new BinaryTree();
-// let test = tree.breadthFirst();
+let test = tree.fizzBuzzTree();
 // let result = tree.max();
 // console.log(result);
+// let bfRes = [1, 2, 3, 6, 4, 5, 7, 8 , 9];
 // console.log(util.inspect(test, false, null, true));
+console.log(JSON.stringify(test));
 
 module.exports = BinaryTree;
