@@ -34,6 +34,7 @@ let insertionSort = (arr) => {
     arr[j + 1] = current;
     // console.log('last',current)
   }
+  return arr;
 }
 
 // insertionSort(testArr);
