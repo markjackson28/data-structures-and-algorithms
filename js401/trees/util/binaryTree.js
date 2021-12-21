@@ -89,6 +89,8 @@ class BinaryTree {
   }
 
   breadthFirst() {
+    // Checking for nodes
+    if (!this.root) { throw new Error('No Nodes in This Tree') }
     // create empty arr for results and queue
     let results = [];
     let queue = [];
@@ -111,6 +113,13 @@ class BinaryTree {
   }
 
   fizzBuzzTree() {
+    if (this.root === null) { 
+      throw new Error('No Nodes in This Tree');
+    }
+    // if (this.root === null) { 
+    //   console.log('No Node in This Tree'); 
+    //   return; 
+    // }
     let queue = [];
     let results = [];
     let fizzBuzzRes = [];
@@ -123,8 +132,20 @@ class BinaryTree {
       if (current.left) queue.push(current.left);
       if (current.right) queue.push(current.right);
     }
-
-    for (let i = 1; i < results.length; i++) {
+    // console.log(results);
+    // for (let i = 0; i < results.length; i++) {
+    //   console.log('***', i);
+    //   if ((i % 3) === 0 && (i % 5) === 0) {
+    //     fizzBuzzRes.push("FizzBuzz");
+    //   } else if ((i % 3) === 0) {
+    //     fizzBuzzRes.push("Fizz");
+    //   } else if ((i % 5) === 0) {
+    //     fizzBuzzRes.push("Buzz");
+    //   } else {
+    //     fizzBuzzRes.push(i);
+    //   }
+    // }
+    for (let i of results) {
       if ((i % 3) === 0 && (i % 5) === 0) {
         fizzBuzzRes.push("FizzBuzz");
       } else if ((i % 3) === 0) {
@@ -137,10 +158,9 @@ class BinaryTree {
     }
     return fizzBuzzRes;
   }
-
 };
 
-let one = new Node(1);
+let one = new Node(15);
 let two = new Node(2);
 let three = new Node(3);
 let four = new Node(4);
@@ -169,5 +189,6 @@ let test = tree.fizzBuzzTree();
 // let bfRes = [1, 2, 3, 6, 4, 5, 7, 8 , 9];
 // console.log(util.inspect(test, false, null, true));
 console.log(JSON.stringify(test));
+// console.log(test);
 
 module.exports = BinaryTree;

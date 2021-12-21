@@ -44,6 +44,8 @@ Resources:
 - [Add](https://www.digitalocean.com/community/tutorials/js-binary-search-trees)
 - [Search](https://www.tutorialspoint.com/Searching-for-values-in-an-Javascript-Binary-Search-Tree)
 - [BFT](https://dev.to/edwardcashmere/binary-tree-part-3-breadth-first-search-javascript-and-python-21k1)
+- [For of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Remainder '%'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
 
 ## Solution
 - run `npm test`
