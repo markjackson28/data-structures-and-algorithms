@@ -2,6 +2,21 @@
 
 # Challenge Summary
 
+## FizzBuzz
+- Write a function called fizz buzz tree
+- Arguments: k-ary tree
+- Return: new k-ary tree
+- Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+- If the value is divisible by 3, replace the value with “Fizz”
+- If the value is divisible by 5, replace the value with “Buzz”
+- If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+- If the value is not divisible by 3 or 5, simply turn the number into a String.
+
+## Breath-first Traversal
+- Write a function called breadth first
+- Arguments: tree
+- Return: list of all values in the tree, in the order they were encountered
+
 - Node
   - Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 - Binary Tree
@@ -28,6 +43,9 @@ On paper, trees makes sense to me but when it comes to writing the code, it got 
 Resources:
 - [Add](https://www.digitalocean.com/community/tutorials/js-binary-search-trees)
 - [Search](https://www.tutorialspoint.com/Searching-for-values-in-an-Javascript-Binary-Search-Tree)
+- [BFT](https://dev.to/edwardcashmere/binary-tree-part-3-breadth-first-search-javascript-and-python-21k1)
+- [For of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Remainder '%'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
 
 ## Solution
 - run `npm test`

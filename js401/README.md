@@ -16,3 +16,4 @@
 - [Code Challenge 10 - Stack Queue Animal Shelter](stack-queue-animal-shelter/README.md)
 - [Code Challenge 11 - Stack Queue Brackets](stack-queue-brackets/README.md)
 - [Code Challenge 12 - Trees](trees/README.md)
+- [Code Challenge Class 26 - Insertion Sort](insertion-sort/BLOG.md)
