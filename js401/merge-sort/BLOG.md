@@ -17,6 +17,8 @@ What this function does is take in an array as an argument. We then declare a va
 
 ***
 ![merge](./img/merge.png)
+***
+![merge2](./img/merge2.png)
 
 After we sort, we have a helper function that is called in `merge()` that is called within the last part of the `if` statement in `mergeSort()`. `merge()` takes in left, right, and arr. Once inside this method, it compares the values and assigns the values to the correct index position.
 
