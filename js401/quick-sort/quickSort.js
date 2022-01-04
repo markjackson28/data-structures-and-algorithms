@@ -34,4 +34,51 @@
 
 let arr = [8, 4, 23, 42, 16, 15];
 
+function quickSort(arr, leftIndex, rightIndex) {
+  console.log('qs', arr, leftIndex, rightIndex);
+  let index;
+  if (arr.length > 1) {
+    index = partition(arr, leftIndex, rightIndex); //index returned from partition
+    if (leftIndex < index - 1) { //more elements on the left side of the pivot
+      quickSort(arr, leftIndex, index - 1);
+    }
+    if (index < rightIndex) { //more elements on the right side of the pivot
+      quickSort(arr, index, rightIndex);
+    }
+  }
+  return arr;
+}
 
+function partition(arr, leftIndex, rightIndex) {
+  console.log('par', arr, leftIndex, rightIndex);
+  let pivot = arr[Math.floor((rightIndex + leftIndex) / 2)], //middle element
+    i = leftIndex, //leftIndex pointer
+    j = rightIndex; //right pointer
+    console.log('middle', pivot)
+  while (i <= j) {
+    while (arr[i] < pivot) {
+      i++;
+    }
+    while (arr[j] > pivot) {
+      j--;
+    }
+    if (i <= j) {
+      swap(arr, i, j); //swapping two elements
+      i++;
+      j--;
+    }
+  }
+  return i;
+}
+
+function swap(arr, leftIndex, rightIndex) {
+  console.log('swap', arr, leftIndex, rightIndex);
+  let temp = arr[leftIndex];
+  arr[leftIndex] = arr[rightIndex];
+  arr[rightIndex] = temp;
+}
+
+let test = quickSort(arr, 0, arr.length - 1);
+console.log(test); 
+
+module.exports = quickSort;
