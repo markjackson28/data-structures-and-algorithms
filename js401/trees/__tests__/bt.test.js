@@ -15,6 +15,8 @@ const BT = require('../util/binaryTree');
 //       / \
 //      8   9
 
+let inRes = [6, 8, 7, 9, 2, 1, 4, 3, 5];
+
 // we want this to happen before each test
 let one = new Node(1);
 let two = new Node(2);
