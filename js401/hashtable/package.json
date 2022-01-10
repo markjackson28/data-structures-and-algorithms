@@ -1,0 +1,15 @@
+{
+  "name": "hashtable",
+  "version": "1.0.0",
+  "description": "'Hash Tables are a data structure that allow you to create a list of paired values. You can then retrieve a certain value by using the key for that value, which you put into the table beforehand.'",
+  "main": "hashtable.js",
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "watch": "jest --coverage --verbose --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}
