@@ -75,6 +75,9 @@ class Hashtable {
     // modulo against the size of your hashmap
     // return the index
   }
+  repeatedTerm(string) {
+
+  }
 }
 
 // let myhash = new Hashtable(20);
