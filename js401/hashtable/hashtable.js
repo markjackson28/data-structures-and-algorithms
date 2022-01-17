@@ -79,14 +79,14 @@ class Hashtable {
 
 let myhash = new Hashtable(100);
 // console.log(myhash);
-// myhash.add('Octane', 'Speed Runner');
-// myhash.add('Gibby', 'On demand cover');
-// myhash.add('Valk', 'Jetpack');
-// myhash.add('Bloodhound', 'Scanner');
+myhash.add('Octane', 'Speed Runner');
+myhash.add('Gibby', 'On demand cover');
+myhash.add('Valk', 'Jetpack');
+myhash.add('Bloodhound', 'Scanner');
 
-// let getHash = myhash.contains('Octane');
+let getHash = myhash.get('Octane');
 
-// console.log(testString.toLowerCase());
+// console.log(getHash.head.value);
 
 // let hashSet = new Set([1, 2, 'butt', 4]);
 // console.log('**', hashSet.has(3));
