@@ -55,7 +55,7 @@ class Hashtable {
   get(key) {
     let hash = this.hash(key);
     if (this.map[hash] === undefined) {
-      return 'Key does not exist';
+      return;
     }
     return this.map[hash];
   }

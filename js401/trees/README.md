@@ -37,6 +37,9 @@
       - Argument: value
       - Returns: boolean indicating whether or not the value is in the tree at least once.
 
+# Tree Intersection
+
+
 ## Approach & Efficiency
 On paper, trees makes sense to me but when it comes to writing the code, it got a bit confusing to me. I still need a bit of practice with these. I did find how to do them through resources. I did console out what was happening within the functions but still need to work on them.
 
