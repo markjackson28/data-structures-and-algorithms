@@ -54,11 +54,11 @@ class Hashtable {
   }
   get(key) {
     let hash = this.hash(key);
-    if(this.map[hash] === undefined) {
-      return 'Key does not exist';
+    if (this.map[hash] === undefined) {
+      return;
     }
     return this.map[hash];
-   }
+  }
   contains(key) {
     let hash = this.hash(key);
     if (this.map[hash]) return true;
@@ -77,14 +77,19 @@ class Hashtable {
   }
 }
 
-// let myhash = new Hashtable(20);
-// myhash.add('Octane', 'Speed Runner');
-// myhash.add('Gibby', 'On demand cover');
-// myhash.add('Valk', 'Jetpack');
-// myhash.add('Bloodhound', 'Scanner');
+let myhash = new Hashtable(100);
+// console.log(myhash);
+myhash.add('Octane', 'Speed Runner');
+myhash.add('Gibby', 'On demand cover');
+myhash.add('Valk', 'Jetpack');
+myhash.add('Bloodhound', 'Scanner');
 
-// let getHash = myhash.contains('Octane');
+let getHash = myhash.get('Octane');
 
-// console.log(getHash);
+// console.log(getHash.head.value);
+
+// let hashSet = new Set([1, 2, 'butt', 4]);
+// console.log('**', hashSet.has(3));
+// console.log('***', hashSet);
 
 module.exports = Hashtable;

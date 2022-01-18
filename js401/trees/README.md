@@ -3,6 +3,7 @@
 # Challenge Summary
 
 ## FizzBuzz
+
 - Write a function called fizz buzz tree
 - Arguments: k-ary tree
 - Return: new k-ary tree
@@ -13,6 +14,7 @@
 - If the value is not divisible by 3 or 5, simply turn the number into a String.
 
 ## Breath-first Traversal
+
 - Write a function called breadth first
 - Arguments: tree
 - Return: list of all values in the tree, in the order they were encountered
@@ -37,7 +39,13 @@
       - Argument: value
       - Returns: boolean indicating whether or not the value is in the tree at least once.
 
+# Tree Intersection
+
+- Write a function called tree_intersection that takes two binary trees as parameters.
+- Using your Hashmap implementation as a part of your algorithm, return a set of values found in both trees.
+
 ## Approach & Efficiency
+
 On paper, trees makes sense to me but when it comes to writing the code, it got a bit confusing to me. I still need a bit of practice with these. I did find how to do them through resources. I did console out what was happening within the functions but still need to work on them.
 
 Resources:

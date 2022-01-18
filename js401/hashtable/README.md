@@ -19,6 +19,9 @@ Implement a Hashtable Class with the following methods:
 - hash
   - Arguments: key
   - Returns: Index in the collection for that key
+- repeatedWord
+  - Arguments: string
+  - Returns: Repeated word
 
 ## Efficiency
 
@@ -28,3 +31,6 @@ Search: O(1)
 ## Resources
 - [JavaScript Hash Table – Associative Array Hashing in JS](https://www.freecodecamp.org/news/javascript-hash-table-associative-array-hashing-in-js/)
 - [Data Structures: Hash Tables](https://www.youtube.com/watch?v=shs0KM3wKv8)
+- [Set() - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
+- [Stackoverflow - repeated word](https://stackoverflow.com/questions/58422823/how-to-find-the-first-pair-of-repeated-words-in-a-string-without-hashmap)
+- [GeeksforGeeks - repeated word](https://www.geeksforgeeks.org/find-first-repeated-word-string/)

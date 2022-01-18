@@ -19,3 +19,4 @@
 - [Insertion Sort](insertion-sort/BLOG.md)
 - [Merge Sort](merge-sort/BLOG.md)
 - [Quick Sort](quick-sort/BLOG.md)
+- [HashTables](hashtable/README.md)
