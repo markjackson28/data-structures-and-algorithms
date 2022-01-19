@@ -11,7 +11,7 @@ let leftJoin = (HT1, HT2) => {
     if (HT1.map[i] !== undefined) {
       // console.log(HT1.map[i])
       let key = (Object.keys(HT1.map[i].head.value)[0]);
-      // console.log(HT1.map[i].head.value[key]);
+      // console.log(key);
       secondArray.push(key);
       secondArray.push(HT1.map[i].head.value[key]);
       // console.log(HT1.map[i].head.value[key]);
