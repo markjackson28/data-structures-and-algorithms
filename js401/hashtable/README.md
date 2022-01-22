@@ -22,7 +22,12 @@ Implement a Hashtable Class with the following methods:
 - repeatedWord
   - Arguments: string
   - Returns: Repeated word
-
+- leftJoin
+  - Arguments: two hash maps
+    - The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+    - The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+  - Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
+  
 ## Efficiency
 
 Space: O(n)  
@@ -34,3 +39,4 @@ Search: O(1)
 - [Set() - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
 - [Stackoverflow - repeated word](https://stackoverflow.com/questions/58422823/how-to-find-the-first-pair-of-repeated-words-in-a-string-without-hashmap)
 - [GeeksforGeeks - repeated word](https://www.geeksforgeeks.org/find-first-repeated-word-string/)
+- [Object.keys - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
