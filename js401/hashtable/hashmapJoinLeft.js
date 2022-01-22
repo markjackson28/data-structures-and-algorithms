@@ -4,28 +4,28 @@ let Hashtable = require('./hashtable');
 const util = require('util');
 
 let leftJoin = (HT1, HT2) => {
-  let firstArray = [];
+  let mainArray = [];
   for(let i = 0; i < HT1.map.length; i++){
     // console.log(HT1.map);
-    let secondArray = [];
+    let subArray = [];
     if (HT1.map[i] !== undefined) {
       // console.log(HT1.map[i])
       let key = (Object.keys(HT1.map[i].head.value)[0]);
-      // console.log(key);
-      secondArray.push(key);
-      secondArray.push(HT1.map[i].head.value[key]);
+      // console.log(HT1.map[i].head.value[key]);
+      subArray.push(key);
+      subArray.push(HT1.map[i].head.value[key]);
       // console.log(HT1.map[i].head.value[key]);
       if (HT2.contains(key)) {
-        secondArray.push(HT2.map[i].head.value[key]);
+        subArray.push(HT2.map[i].head.value[key]);
         // console.log(HT2.map[i].head.value[key]);
       } else {
-        secondArray.push(null);
+        subArray.push(null);
       }
-      firstArray.push(secondArray);
+      mainArray.push(subArray);
     }
   }
-  // console.log(firstArray);
-  return firstArray;
+  // console.log(mainArray);
+  return mainArray;
 }
 
 let ht1 = new Hashtable(20);
