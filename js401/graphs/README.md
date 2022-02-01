@@ -28,6 +28,14 @@ The graph should be represented as an adjacency list, and should include the fol
   - Arguments: none
   - Returns the total number of nodes in the graph
 
+Challenge Type: Extending an Implementation
+
+- BFS
+  - breadth first
+  - Arguments: Node
+  - Return: A collection of nodes in the order they were visited.
+  - Display the collection
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
