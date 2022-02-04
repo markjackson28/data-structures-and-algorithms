@@ -6,7 +6,12 @@ const Graph = require('./graph');
 // return: Bool and cost/ 0 for cost
 
 let businessTrip = (graph, arr) => {
-  if(!graph) return 'Invalid or missing graph';
+  if (!graph) return 'Invalid or missing graph';
+  for (let i = 0; i <= arr.length - 1; i++) {
+    console.log('graph', graph.getNeighbors(arr[i]));
+  }
+  // console.log('arr', arr);
+  // return graph;
 }
 
 
@@ -15,6 +20,7 @@ let graph = new Graph();
 
 // Cites/Verticies
 const pandora = graph.addVertex('Pandora');
+// console.log(pandora);
 const arendelle = graph.addVertex('Arendelle');
 const metroville = graph.addVertex('Metroville');
 const narnia = graph.addVertex('Narnia');
@@ -47,5 +53,11 @@ graph.addEdge(monstropolis, arendelle, 42);
 graph.addEdge(monstropolis, metroville, 105);
 graph.addEdge(monstropolis, naboo, 73);
 
-console.log(businessTrip())
-console.log(util.inspect(graph, false, null, true));
+// console.log('***', graph.getNeighbors(pandora))
+
+console.log(businessTrip(graph, [metroville, pandora]))
+// console.log(businessTrip(graph, ['Metroville', 'Pandora']));
+// console.log(businessTrip(graph, ['Arendelle', 'Monstropolis', 'Naboo']))
+// console.log(businessTrip(graph, ['Naboo', 'Pandora']))
+// console.log(businessTrip(graph, ['Narnia', 'Adrendelle', 'Naboo']))
+// console.log(util.inspect(graph, false, null, true));
