@@ -5,12 +5,15 @@ const Graph = require('./graph');
 // Argument: (graph, arr of city names)
 // return: Bool and cost/ 0 for cost
 
-let businessTrip = () => {
-
+let businessTrip = (graph, arr) => {
+  if(!graph) return 'Invalid or missing graph';
 }
 
+
+// Graph
 let graph = new Graph();
 
+// Cites/Verticies
 const pandora = graph.addVertex('Pandora');
 const arendelle = graph.addVertex('Arendelle');
 const metroville = graph.addVertex('Metroville');
@@ -18,6 +21,7 @@ const narnia = graph.addVertex('Narnia');
 const naboo = graph.addVertex('Naboo');
 const monstropolis = graph.addVertex('Monstropolis');
 
+// Edges/Flights
 // Pandora
 graph.addEdge(pandora, arendelle, 150);
 graph.addEdge(pandora, metroville, 82);
@@ -43,4 +47,5 @@ graph.addEdge(monstropolis, arendelle, 42);
 graph.addEdge(monstropolis, metroville, 105);
 graph.addEdge(monstropolis, naboo, 73);
 
+console.log(businessTrip())
 console.log(util.inspect(graph, false, null, true));
