@@ -1,5 +1,6 @@
 'use strict';
 
+// ****** Most of this was from Review ******** //
 
 // *********** INSTRUCTIONS ************* //
 /*
@@ -52,52 +53,36 @@ class Edge {
 
 class Graph {
   constructor() {
-    // why use a Map?
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
     this.adjacencyList = new Map();
   }
 
   addVertex(value) {
-    // - Arguments: value
-    // - Returns: The added node
     let vertex = new Vertex(value)
-    // console.log('vertec', vertex.value)
-    // - Add a node to the graph
     this.adjacencyList.set(vertex, []);
     return vertex;
   }
 
-  // adds a directional edge
-  addEdge(node1, node2) {
-    // - Arguments: 2 nodes to be connected by the edge, weight (optional)
-    // - Returns: nothing
-    // - Adds a new edge between two nodes in the graph
-    // - If specified, assign a weight to the edge
-    // - Both nodes should already be in the Graph
-
-    // here is how you get a node from the adjacencyList
-    // console.log('node', node1);
-    // console.log('adjlist', this.adjacencyList);
-    const adjancancies = this.adjacencyList.get(node1);
-    adjancancies.push(new Edge(node2, 2));
+  // Adds a directional edge
+  addEdge(startVertex, endVertex, weight = 0) {
+    if (!this.adjacencyList.has(startVertex) || !this.adjacencyList.has(endVertex)) {
+      throw new Error('__ERROR__ Invalid Vertices');
+    }
+    const adjancancies = this.adjacencyList.get(startVertex);
+    adjancancies.push(new Edge(endVertex, weight));
   }
 
   getVertices() {
-    // - Arguments: none
-    // - Returns all of the nodes in the graph as a collection (set, list, or similar)
     return this.adjacencyList;
   }
 
-  getNeighbors(node) {
-    // - Arguments: node
-    // - Returns a collection of edges connected to the given node
-    // - Include the weight of the connection in the returned collection
-    return this.adjacencyList.get(node)
+  getNeighbors(vertex) {
+    if (!this.adjacencyList.has(vertex)) {
+      throw new Error('__ERROR__ Invalid Vertex', vertex);
+    }
+    return [...this.adjacencyList.get(vertex)];
   }
 
   size() {
-    // - Arguments: none
-    // - Returns the total number of nodes in the graph
     return this.adjacencyList.size;
   }
 
@@ -177,5 +162,6 @@ graph.addEdge(b, a);
 graph.addEdge(c, b);
 
 // console.log(graph.getNeighbors(b));
-// console.log(graph.size());
+// console.log(graph.getVertices());
 
+module.exports = Graph;
