@@ -49,3 +49,4 @@ Determine whether the trip is possible with direct flights, and how much it woul
 
 ## References
 [GeeksforGeeks - Graphs](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
+[Map MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
