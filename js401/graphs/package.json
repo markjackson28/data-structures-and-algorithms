@@ -1,0 +1,14 @@
+{
+  "name": "graphs",
+  "version": "1.0.0",
+  "description": "'A Graph consists of a finite set of vertices(or nodes) and set of Edges which connect a pair of nodes.'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}

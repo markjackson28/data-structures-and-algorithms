@@ -20,3 +20,4 @@
 - [Merge Sort](merge-sort/BLOG.md)
 - [Quick Sort](quick-sort/BLOG.md)
 - [HashTables](hashtable/README.md)
+- [HashTables](graphs/README.md)
