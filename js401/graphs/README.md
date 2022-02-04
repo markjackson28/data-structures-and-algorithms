@@ -36,6 +36,14 @@ Challenge Type: Extending an Implementation
   - Return: A collection of nodes in the order they were visited.
   - Display the collection
 
+Challenge Type: Code Challenge / Algorithm
+
+- Write a function called business trip
+- Arguments: graph, array of city names
+- Return: cost or null
+
+Determine whether the trip is possible with direct flights, and how much it would cost.
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
