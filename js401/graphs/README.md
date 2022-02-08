@@ -44,9 +44,17 @@ Challenge Type: Code Challenge / Algorithm
 
 Determine whether the trip is possible with direct flights, and how much it would cost.
 
+Challenge Type: Extending an Implementation
+
+- Name: Depth first
+- Arguments: Node (Starting point of search)
+- Return: A collection of nodes in their pre-order depth-first traversal order
+- Program output: Display the collection
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## References
 [GeeksforGeeks - Graphs](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 [Map MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+[Graph Search Algorithms in 100 Seconds - And Beyond with JS](https://www.youtube.com/watch?v=cWNEl4HE2OE&t=313s)
