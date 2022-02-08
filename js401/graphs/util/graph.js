@@ -110,20 +110,21 @@ class Graph {
 
 
   bfs(startNode) {
-    const queue = [];
+    const queue = [startNode];
     const visitedVertices = new Set();
-
-    queue.push(startNode);
+    // console.log(queue);
+    // queue.push(startNode);
     visitedVertices.add(startNode);
 
     while (queue.length) {
       const currentNode = queue.shift();
 
       const neighbors = this.getNeighbors(currentNode);
+      // console.log(neighbors)
 
       for (let neighbor of neighbors) {
         const neighborNode = neighbor.vertex;
-
+        // console.log(neighborNode)
         if (visitedVertices.has(neighborNode)) {
           continue;
         } else {
@@ -133,7 +134,7 @@ class Graph {
       }
 
     }
-    console.log('visitedNodes', visitedNodes);
+    console.log('visitedNodes', visitedVertices);
     return;
   }
 
@@ -146,6 +147,9 @@ class Graph {
       If the top node does not have any unvisited children, Pop that node off the stack
       repeat until the stack is empty.
     */
+    let visited = new Set();
+    visited.add(startNode);
+
   }
 
 }
@@ -162,6 +166,6 @@ graph.addEdge(b, a);
 graph.addEdge(c, b);
 
 // console.log(graph.getNeighbors(b));
-// console.log(graph.getVertices());
+console.log(graph.bfs(c));
 
 module.exports = Graph;
